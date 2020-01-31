@@ -1,4 +1,7 @@
-const multiply = require('./multiply');
+// const multiply = require('./multiply');
+const multiply = function multiply(a,b){
+    return a*b;
+}
 
 describe('test multiply positive scenarios',() =>{
     test('multiply 3*2 should equal to 6',() =>{
@@ -14,6 +17,10 @@ test('object example', () => {
 
   test('multiply 4*3 should not equal to 11',() =>{
     expect(multiply(4,3)).not.toBe(11);
+});
+
+  test('multiply 4*3 should give excaption',() =>{
+    expect(multiply(4,3)).not.toBe(12);
 });
 
 
